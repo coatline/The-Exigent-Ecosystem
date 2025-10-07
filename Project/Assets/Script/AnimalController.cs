@@ -24,12 +24,7 @@ public class AnimalController : MonoBehaviour
 
     void CreateAnimal(OrganismType o)
     {
-        AnimalVisuals av = visuals.GetAnimalVisual();
         Animal a = new Animal(o, world.GetOpenCell());
-    }
-
-    void Update()
-    {
-
+        AnimalVisuals av = visuals.GetAnimalVisual(a);
     }
 }
